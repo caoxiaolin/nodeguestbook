@@ -1,0 +1,32 @@
+{
+  "name": "nodeguestbook",
+  "version": "1.0.0",
+  "description": "a guestbook written by nodejs & mongodb",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^2.5.1",
+    "express": "^4.14.0",
+    "mongoose": "^4.5.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caoxiaolin/nodeguestbook.git"
+  },
+  "keywords": [
+    "nodejs",
+    "mongodb",
+    "express",
+    "ejs",
+    "mongoose"
+  ],
+  "author": "caoxiaolin",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/caoxiaolin/nodeguestbook/issues"
+  },
+  "homepage": "https://github.com/caoxiaolin/nodeguestbook#readme"
+}
