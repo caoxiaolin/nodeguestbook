@@ -4,13 +4,15 @@
   "description": "a guestbook written by nodejs & mongodb",
   "main": "app.js",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "ejs": "^2.5.1",
     "express": "^4.14.0",
-    "mongoose": "^4.5.10"
+    "moment": "^2.14.1",
+    "mongoose": "^4.6.0"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+    "test": "echo \\\\\\\"Error: no test specified\\\\\\\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -21,7 +23,9 @@
     "mongodb",
     "express",
     "ejs",
-    "mongoose"
+    "mongoose",
+    "moment",
+    "body-parser"
   ],
   "author": "caoxiaolin",
   "license": "BSD-2-Clause",

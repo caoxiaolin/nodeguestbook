@@ -17,17 +17,54 @@
     <![endif]-->
   </head>
   <body>
-    <% for (var i = 0; i < messageList.length; i++) {
-        var message = messageList[i];
-    %>
-        <div>
-            <h4><%= message.username %>(<%= message.create_date%>)</h4>
-            <p><%= message.content%></p>
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">NodeJS</a>
         </div>
-    <% } %>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="https://github.com/caoxiaolin/nodeguestbook">Github</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>A Guestbook Written By NodeJS</h1>
+        <p>This application is based on nodejs, express as the framework, ejs as template engine, database use mongodb, here demonstrate some common features.</p>
+        <p><a class="btn btn-primary btn-lg" href="https://github.com/caoxiaolin/nodeguestbook" role="button">Learn more</a></p>
+      </div>
+      <form role="form" id="form">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" class="form-control" id="username" name="username" placeholder="Enter username">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="content">Content</label>
+          <textarea class="form-control" id="content" name="content" rows="3"></textarea>
+        </div>
+        <button type="button" class="btn btn-default" id="submit">Submit</button>
+      </form>
+      <% for (var i = 0; i < messageList.length; i++) {
+          var message = messageList[i];
+      %>
+      <hr />
+      <div>
+          <h4><%= message.username %>(<%= moment(message.create_date).format('YYYY-MM-DD HH:MM:SS')%>)</h4>
+          <p><%= message.content%></p>
+      </div>
+      <% } %>
+    </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/common.js"></script>
   </body>
 </html>
