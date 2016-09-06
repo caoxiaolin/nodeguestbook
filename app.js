@@ -14,6 +14,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 router.setRequestUrl(app);
 
-http.createServer(app).listen(config.port, function(){
-  console.log("Express server listening on port " + config.port);
+app.listen(config.port, function() {
+    console.log('listening on http://localhost:' + config.port);
 });
