@@ -4,6 +4,6 @@ exports.setRequestUrl = function(app){
 
     app.get('/', objIndex.index);
     app.post('/message/add', objMessage.add);
-    app.post('/message/:id/reply', objMessage.reply);
-    app.get('/message/:id/delete', objMessage.delete);
+    app.post('/message/reply/:id', objMessage.reply);
+    app.get('/message/delete/:id', objMessage.delete);
 }

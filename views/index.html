@@ -51,14 +51,17 @@
         </div>
         <button type="button" class="btn btn-default" id="submit">Submit</button>
       </form>
+      <hr />
       <% for (var i = 0; i < messageList.length; i++) {
           var message = messageList[i];
       %>
-      <hr />
-      <div>
-          <h4><%= message.username %>(<%= moment(message.create_date).format('YYYY-MM-DD HH:MM:SS')%>)</h4>
-          <p><%= message.content%></p>
-      </div>
+      <blockquote>
+          <h4><%= message.username %>(<%= moment(message.create_date).format('YYYY-MM-DD HH:MM:SS')%>)[<a href="###" class="del" _id="<%= message._id%>">删除</a>]</h4>
+          <p><%= message.content%><%if (!message.reply){%>[<a href="###" class="reply" _id="<%= message._id%>">回复</a>]<%}%></p>
+          <%if (message.reply){%>
+            <small><%= message.reply%></small>
+          <%}%>
+      </blockquote>
       <% } %>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

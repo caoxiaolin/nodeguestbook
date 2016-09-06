@@ -9,5 +9,5 @@ exports.index = function(req, res, next){
             return next(err);
         }
         res.render('index.html', {messageList : result, moment : moment});
-    });
+    }).sort({"_id":-1});
 }
