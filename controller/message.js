@@ -6,8 +6,9 @@ exports.add = function(req, res, next){
     messageModel.create({username: req.body.username, email: req.body.email, content: req.body.content}, function(err, result) {
         if (err){
             console.log(err);
-             return;
+            return;
         }
+        console.log("data insert:", result);
         res.send(result);
     });
 }
